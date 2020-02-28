@@ -1,0 +1,27 @@
+{
+  "name": "project-tech",
+  "version": "1.0.0",
+  "description": "block-tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yzerrr/Project-Tech.git"
+  },
+  "author": "Joey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yzerrr/Project-Tech/issues"
+  },
+  "homepage": "https://github.com/Yzerrr/Project-Tech#readme",
+  "dependencies": {
+    "camel-case": "^4.1.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
