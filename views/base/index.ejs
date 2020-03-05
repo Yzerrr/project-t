@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('partials/head.ejs') %>
+<title>index</title>
+
+<body>
+    <!-- header -->
+    <%- include('partials/header.ejs') %>
+    <main>
+        <h1>index.ejs</h1>
+        <h2><%=data.title%></h2>
+        <h3> <%=data.name%></h3>
+    </main>
+
+    <section>
+        <article>
+            <div class="profile-picture">
+                <img src="/assets/images/stock-photo-1.jpg" alt="profile picture" srcset="">
+            </div>
+        </article>
+    </section>
+
+
+    <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>
