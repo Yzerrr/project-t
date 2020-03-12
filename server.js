@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const ejs = require('ejs')
+const mongoose  = require('mongoose')
 
 
 
@@ -11,6 +12,13 @@ let data = {
     name: "test"
 };
 
+let profile = {
+    profileName: "Alexane Collins",
+    profileAge: 20,
+    profileCity: "Amsterdam",
+    profileDiscription: "somthing about the person somthingsomthing about the person somthing about about"
+};
+
 
 app.use(express.static('public'))
 app.set("view engine", "ejs")
@@ -18,13 +26,14 @@ app.set("view engine", "ejs")
 
 app.get("/about", (req, res) => {
     res.render("base/about.ejs", {
-        data
+        data, profile
     });
 });
 
+
 app.get("/index", (req, res) => {
     res.render("base/index.ejs", {
-        data
+        data, profile
     });
 });
 

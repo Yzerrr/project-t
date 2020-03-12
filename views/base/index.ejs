@@ -8,22 +8,56 @@
     <!-- header -->
     <%- include('partials/header.ejs') %>
     <main>
-        <h1>index.ejs</h1>
-        <h2><%=data.title%></h2>
-        <h3> <%=data.name%></h3>
-    </main>
 
-    <section>
-        <article>
-            <div class="profile-picture">
-                <img src="/assets/images/stock-photo-1.jpg" alt="profile picture" srcset="">
+
+
+
+        <!-- slindingProfiles -->
+        <section class="profiles">
+        
+            <div class="full hide-scroll">
+                <ul class="hs">
+                    <li class="profile">
+                        <div class="overlay-blur add-blur">
+                            <img src="/assets/images/overlay.png" alt="overlay filter">
+                        </div>
+        
+                        <img src="/assets/images/stock-photo-1.jpg" alt="photo">
+        
+                        <article class="profile-info">
+                            <h1 class="space"><%= profile.profileName %></h1>
+                            <h2 class="space"><%= profile.profileAge %></h2>
+                            <h2 class="space"><%= profile.profileCity %></h2>
+                            <p> <%= profile.profileDiscription%> </p>
+                        </article>
+        
+                        <input type="button" value="Show" class="button">
+        
+                        <div class="dislike-like">
+        
+                            <a href="#">
+                                <img src="/assets/icons/delete.svg" alt="dislike">
+                            </a>
+                            <a href="#">
+                                <img src="/assets/icons/heart.svg" alt="like">
+                            </a>
+        
+                        </div>
+        
+                    </li>
+        
+        
+        
+        
+        
+                </ul>
             </div>
-        </article>
-    </section>
+        </section>
 
 
+       
+    </main>
     <%- include('partials/footer.ejs') %>
-
 </body>
 
 </html>
