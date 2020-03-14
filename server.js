@@ -53,7 +53,7 @@ app.get("/index", (req, res) => {
     res.render("base/index.ejs", {
         data, profile
     });
-    collection.insertOne({naam: "bob"})
+    // collection.insertOne({naam: "qq"})
 
 });
 
@@ -67,3 +67,4 @@ app.listen(port, () => console.log(`listening on port ${port}`))
 app.use(function (req, res) {
     res.send("404: Page not found", 404);
 });
+ 

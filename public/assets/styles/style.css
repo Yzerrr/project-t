@@ -176,6 +176,7 @@ section div ul li  > img {
 }
 .add-blur{
     opacity: 1.0;
+    transition: 150ms;
 }
 
 
@@ -229,6 +230,40 @@ section div ul li  > img {
 /*tablet*/
 /*************************/
 
+@media (min-width: 48em) 
+and (max-width: 64em){
+
+body{
+    background: yellow;
+}
+/* menu */
+header nav ul li{
+    width: 22em;
+}
+header nav ul {
+    max-width: 70em;
+}
+
+.hs>li, .profile{
+    width: 40em;
+    margin-top: 10em;
+}
+section div ul  li > img{
+    width: 36em;
+}
+.the-profile{
+    width: 36em;
+    height: 36em;
+}
+
+.button{
+    bottom: 33em;
+}
+.dislike-like{
+    bottom: 38em;
+}
+
+}
 
 /*************************/
 /*desktop*/
