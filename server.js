@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const ejs = require('ejs')
-const mongoose  = require('mongoose')
+const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 require('dotenv').config()
 
@@ -11,18 +11,18 @@ require('dotenv').config()
 //Database config
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://" + process.env.DB_NAME + ":" + process.env.DB_KEY + "@blocktech-aia3c.azure.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, {
+    useNewUrlParser: true
+});
 let db = null;
 
 app.use(bodyParser.json())
 
 MongoClient.connect(uri, function (err, client) {
     if (err) {
-      throw err
+        throw err
     }
-    
 
-  
     db = client.db("datingapp");
 
 })
@@ -37,19 +37,25 @@ MongoClient.connect('connect', (err, connected) => {
 app.get("/index", async (req, res) => {
     const profiles = await db.collection('profiles').find().toArray();
     res.render("base/index.ejs", {
-        data, profiles
+        data,
+        profiles,
+        accounts
     });
-   
-    collection.insertOne({naam: "test"})
+
+    collection.insertOne({
+        naam: "test"
+    })
 });
 
 app.get("/settings", (req, res) => {
     res.render("base/settings.ejs", {
-        data, profile
+        data,
+        profile,
+        accounts
     });
 });
 
-
+// send data to Profiles collection
 app.post("/api/newProfile", async (req, res) => {
 
     console.log("BODY DATA", req.body);
@@ -57,32 +63,32 @@ app.post("/api/newProfile", async (req, res) => {
     const documents = await db.collection('profiles').find().toArray();
 
     console.log("DOCUMENTS", documents)
-    res.send({data: documents})
+    res.send({
+        data: documents
+    })
 })
+
+
+
 // sign up profile
 app.get("/newProfile", async (req, res) => {
-   
-   
+
+
     res.render("base/newProfile.ejs", {
-        data, profile
+        data,
+        profile,
+        accounts
     });
 });
 
 
-// like dislike
 
-
-
-
-
-
-
-
-
-
-function form (req, res) {
+function form(req, res) {
     res.render('newProfile.ejs')
 }
+
+
+
 
 
 let data = {
@@ -98,9 +104,15 @@ let profile = {
     profileAge: 20,
     profileCity: "Amsterdam",
     profileDiscription: "somthing about the person somthingsomthing about the person somthing about about",
-    
+
 };
 
+let accounts = {
+    profileName: "Bob lins",
+    profileAge: 24,
+    profileCity: "Amsterdam",
+    profileDiscription: "hier iets over mij",
+}
 
 
 
@@ -118,8 +130,7 @@ app.set("view engine", "ejs")
 app.use(function (req, res) {
     res.send("404: Page not found", 404);
 });
- 
+
 
 
 app.listen(port, () => console.log(`listening on port ${port}`))
-
