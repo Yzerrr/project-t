@@ -69,6 +69,16 @@ app.get("/newProfile", async (req, res) => {
 });
 
 
+// like dislike
+
+
+
+
+
+
+
+
+
 
 function form (req, res) {
     res.render('newProfile.ejs')

@@ -41,14 +41,23 @@ html {
 /* logo */
 .logo {
     position: fixed;
-    left: 1em;
     top: 9px;
-    height: 20px;
-    width: 20px; 
-
+    height: 3em;
+    width: 26em;
+    background-color: #EDA5B5;
+    z-index: 3;
 }
-.logo >img{
+
+.logo>img {
     width: 50px;
+    position: relative;
+    left: 1em;
+}
+
+.logo>h2 {
+    position: fixed;
+    left: 4em;
+    top: 20px;
 }
 
 /* menu */
@@ -229,6 +238,10 @@ section div ul li>img {
     padding-bottom: 2em;
 }
 
+.discription {
+    min-height: 5em;
+}
+
 /* dislike-like buttons */
 .dislike-like {
     position: relative;
@@ -236,8 +249,17 @@ section div ul li>img {
     margin: -39px;
 }
 
-.dislike-like a+a {
+button {
+    border: none;
+    background-color: #E65B7D;
+}
+
+.dislike-like button+button {
     padding-left: 7em;
+
+}
+.status{
+    display: none;
 }
 
 
@@ -248,11 +270,23 @@ section div ul li>img {
 
 @media (min-width: 48em) and (max-width: 64em) {
 
+    .logo {
+        top: 1em;
+        height: 6em;
+        width: 65em;
+
+    }
+
+    .hs {
+        grid-template-columns: 10px repeat(6, calc(50% - var(--gutter) * -11)) 10px;
+    }
+
     body {
         background: yellow;
     }
+
     /* logo */
-    .logo >img{
+    .logo>img {
         width: 80px;
     }
 
@@ -262,7 +296,7 @@ section div ul li>img {
     }
 
     header nav ul {
-        max-width: 70em;
+        max-width: 64em;
     }
 
     .hs>li,
@@ -285,6 +319,7 @@ section div ul li>img {
         width: 25em;
     }
 
+
     .button {
         bottom: 33em;
     }
@@ -293,14 +328,49 @@ section div ul li>img {
         bottom: 38em;
     }
 
+    .status {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 4em;
+    }
+
+    .status div h2{
+        color: seashell;
+        font-size: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+    }
+    .status div h3{
+        color: seashell;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+    }
+
+    .counter {
+        height: 10em;
+        width: 10em;
+        background-color: rgba(230, 91, 126, 0.63);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 7px;
+    }
 }
 
 /*************************/
 /*desktop*/
 /*************************/
+@media (min-width: 64em) and (max-width: 100em) {
 
-
-
+body{
+    background: blue;
+}
+}
 /*************************/
 /*footer*/
 /*************************/
@@ -319,7 +389,7 @@ footer {
 /*************************/
 /*Form*/
 /*************************/
-form{
+form {
     top: 10em;
     position: relative;
     width: 20em;
@@ -330,57 +400,54 @@ form{
 input[type=text],
 select,
 textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: none;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
 }
 
 textarea {
-	height: 100px;
+    height: 100px;
 }
 
 input[type=number],
 select {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
 
 input[type=submit] {
-	background-color: #000000;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
 }
 
 input[type=submit]:hover {
-	background-color: #FD943E;
+    background-color: #FD943E;
 }
 
 input:focus {
-	outline: none;
-	border: 1px solid rgba(255, 143, 62, 0.56);
-	box-shadow: 0 0 10px #FD943E;
+    outline: none;
+    border: 1px solid rgba(255, 143, 62, 0.56);
+    box-shadow: 0 0 10px #FD943E;
 }
 
 textarea:focus {
-	outline: none;
-	border: 1px solid rgba(255, 143, 62, 0.56);
-	box-shadow: 0 0 10px #FD943E;
+    outline: none;
+    border: 1px solid rgba(255, 143, 62, 0.56);
+    box-shadow: 0 0 10px #FD943E;
 
 }
-
-
-

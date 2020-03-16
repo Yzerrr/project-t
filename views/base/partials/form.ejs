@@ -1,16 +1,17 @@
-<form id="mForm" method="post" action="/">
+<form id="mForm" method="post" action="/base/index.ejs">
     <label for="firstname">Naam</label>
-    <input type="text" id="firstname" name="firstname" required>
+    <input type="text" placeholder="John Doe" id="firstname" name="firstname" required>
 
     <label for="city">Stad</label>
-    <input type="text" id="city" name="city" required>
+    <input type="text" placeholder="Amsterdam" id="city" name="city" required>
 
     <label for="age">Leeftijd</label>
-    <input type="number" id="age" name="age" required>
+    <input type="number" placeholder="20" id="age" name="age" required>
+
 
     <label for="message">Beschrijving</label>
     
-    <textarea id="message" name="message"></textarea>
+    <textarea id="message" placeholder="Vertel iets over jezelf" name="message"></textarea>
 
     <input id="submit" type="submit"  value="Aanmelden">
 </form>
