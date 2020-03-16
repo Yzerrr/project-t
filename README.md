@@ -17,10 +17,7 @@ DB_KEY=<pass>
 ```
 ***
 ##### Start server
-```
-nodemon server.js
-```
-or 
+
 ```
 npm start server.js
 ```
