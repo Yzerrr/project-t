@@ -281,9 +281,9 @@ button {
         grid-template-columns: 10px repeat(6, calc(50% - var(--gutter) * -11)) 10px;
     }
 
-    body {
+    /* body {
         background: yellow;
-    }
+    } */
 
     /* logo */
     .logo>img {
@@ -367,24 +367,195 @@ button {
 /*************************/
 @media (min-width: 64em) and (max-width: 100em) {
 
-body{
+/* body{
     background: blue;
+} */
+.logo{
+    top: 0em;
+    height: 6em;
+    width: 100em;
 }
+.hs {
+    grid-template-columns: 10px repeat(6, calc(50% - var(--gutter) * -11)) 10px;
 }
-/*************************/
-/*footer*/
-/*************************/
 
-footer {
-    position: fixed;
-    width: 100%;
-    color: cornsilk;
-    text-align: center;
-    background-color: blue;
-    left: 0em;
-    bottom: 0em;
+
+
+/* logo */
+.logo>img {
+    width: 80px;
+}
+
+/* menu */
+header nav ul li {
+    width: 32em;
+}
+
+header nav ul {
+    max-width: 70em;
+}
+
+.hs>li,
+.profile {
+    width: 40em;
+    margin-top: 10em;
+}
+.profiles {
+    position: relative;
+    top: -5em;
+}
+
+section div ul li>img {
+    width: 36em;
+}
+
+.the-profile {
+    width: 36em;
+    height: 36em;
+}
+
+.profile-info {
+    bottom: 46em;
+    width: 25em;
+}
+
+
+.button {
+    bottom: 33em;
+}
+
+.dislike-like {
+    bottom: 38em;
+}
+
+.status {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 4em;
+}
+
+.status div h2{
+    color: seashell;
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+}
+.status div h3{
+    color: seashell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+}
+
+.counter {
+    height: 10em;
+    width: 10em;
+    background-color: rgba(230, 91, 126, 0.63);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 7px;
+}
+}
+
+@media (min-width: 75em) and (max-width: 15800em) {
+    /* body{
+        background: gray;
+    } */
+
+    .logo{
+        top: 0em;
+        height: 6em;
+        width: 150em;
+    }
+    header nav ul li {
+        width: 100em;
+    }
+    header nav ul {
+        max-width: 102em;
+    }
+    
+    /* menu */
+
+
+.profiles{
+    position: relative;
+    top: -5em;
+}
+
+.hs>li,
+.profile {
+    width: 40em;
+    margin-top: 10em;
+}
+
+section div ul li>img {
+    width: 36em;
+}
+
+.the-profile {
+    width: 36em;
+    height: 36em;
+}
+
+.profile-info {
+    bottom: 46em;
+    width: 25em;
+}
+
+
+.button {
+    bottom: 33em;
+}
+
+.dislike-like {
+    bottom: 38em;
+}
+
+.status {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 4em;
+}
+
+.status div h2{
+    color: seashell;
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+}
+.status div h3{
+    color: seashell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+}
+
+.counter {
+    height: 10em;
+    width: 10em;
+    background-color: rgba(230, 91, 126, 0.63);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 7px;
+}
 
 }
+
+
+
+
+
+
 
 /*************************/
 /*Form*/
@@ -449,5 +620,23 @@ textarea:focus {
     outline: none;
     border: 1px solid rgba(255, 143, 62, 0.56);
     box-shadow: 0 0 10px #FD943E;
+
+}
+
+
+
+
+/*************************/
+/*footer*/
+/*************************/
+
+footer {
+    position: fixed;
+    width: 100%;
+    color: cornsilk;
+    text-align: center;
+    background-color: blue;
+    left: 0em;
+    bottom: 0em;
 
 }
