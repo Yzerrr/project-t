@@ -23,5 +23,5 @@ npm start server.js
 ```
 
 ```
-http://localhost:3000/index
+http://localhost:3000
 ```
