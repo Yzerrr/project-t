@@ -10,26 +10,30 @@ let form = document.getElementById('mForm');
 let showProfileButton = document.querySelector(".button");
 let addBlur = document.querySelector(".add-blur");
 let submitButton = document.getElementById('submit');
-let dislikeButton = document.getElementsByClassName("dislike");
 
 
 
 
 
-
-/* showProfileButton.addEventListener("mousedown", function () {
-    overlayBlur.style.opacity = "0.1";
+window.onload = function () {
 
 
 
-});
-
-showProfileButton.addEventListener("mouseup", function () {
-    overlayBlur.style.opacity = "1.2";
+    // document.getElementsByClassName("disLike").addEventListener("click",);
 
 
-}); */
+    function oo() {
+        alert(location.hostname);
+    }
 
+    showProfileButton.addEventListener("mousedown", function () {
+        overlayBlur.style.opacity = "0.1";
+    });
+
+    showProfileButton.addEventListener("mouseup", function () {
+        overlayBlur.style.opacity = "1.2";
+    });
+}
 
 console.log("submit button", submitButton)
 const formHandler = async (e) => {
@@ -64,13 +68,3 @@ const formHandler = async (e) => {
 
 //  oplossen | lege data versturen is nu nog mogelijk..
 submitButton.addEventListener('click', formHandler)
-
-
-
-
-
-
-
-
-
-

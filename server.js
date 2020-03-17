@@ -6,6 +6,9 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 require('dotenv').config()
 
+// shows the port from server
+app.listen(port, () => console.log(`listening on port ${port}`))
+
 
 
 //Database config
@@ -34,7 +37,7 @@ MongoClient.connect('connect', (err, connected) => {
 
 
 // find persons | index
-app.get("/index", async (req, res) => {
+app.get("/", async (req, res) => {
     const profiles = await db.collection('profiles').find().toArray();
     res.render("base/index.ejs", {
         data,
@@ -70,6 +73,9 @@ app.post("/api/newProfile", async (req, res) => {
 
 
 
+
+
+
 // sign up profile
 app.get("/newProfile", async (req, res) => {
 
@@ -86,10 +92,6 @@ app.get("/newProfile", async (req, res) => {
 function form(req, res) {
     res.render('newProfile.ejs')
 }
-
-
-
-
 
 let data = {
     title: "dateApp",
@@ -132,5 +134,3 @@ app.use(function (req, res) {
 });
 
 
-
-app.listen(port, () => console.log(`listening on port ${port}`))
