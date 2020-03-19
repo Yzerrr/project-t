@@ -45,3 +45,6 @@ npm start server.js
 ```
 http://localhost:3000
 ```
+***
+
+[MIT License](https://github.com/Yzerrr/project-t/blob/master/LICENSE)
