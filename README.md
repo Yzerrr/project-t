@@ -21,7 +21,7 @@ Als ik interesse heb in iemand wil ik vragen kunnen beantwoorden zodat de foto v
 ![cover](https://github.com/Yzerrr/project-t/blob/master/img/3phones.png?raw=true)
 
 
-## installation
+# Installation
 ``` 
 git clone https://github.com/Yzerrr/project-t.git
 cd project-t
