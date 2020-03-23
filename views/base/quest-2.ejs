@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('partials/head.ejs') %>
+<title>question 2</title>
+
+<body>
+    <!-- header -->
+    <%- include('partials/header.ejs') %>
+    <main>
+
+        <!-- slindingProfiles -->
+        <section class="profiles">
+
+            <div class="full hide-scroll">
+                <ul class="hs">
+
+                    
+
+                    <li class="profile">
+                        <div class="overlay-blur add-blur">
+                            <img class="the-profile" src="/assets/images/overlay.png" alt="overlay filter">
+                        </div>
+
+                        <img src="/assets/images/stock-photo-1.jpg" alt="photo">
+
+                        <article class="profile-info">
+                            <h1 class="space">Question 2 here</h1>
+                            <h2 class="space"></h2>
+                            <h2 class="space"></h2>
+                            <p class="discription"> </p>
+                        </article>
+
+                        <div class="answers">
+                            <input type="button" value=" answer-1" class="answer">
+                            <input type="button" value=" answer-2" class="answer">
+                            <input type="button" value=" answer-3" class="answer">
+                        </div>
+                        <a href="quest-3" class="quest-button">
+                            Next
+                        </a>
+
+                        
+                    </li>
+                </ul>
+
+                <div class="status">
+                    <div class="counter dLike">
+                        <h2>10</h2>
+                        <h3>Dislike</h3>
+                    </div>
+                    <div class="counter like">
+                        <h2>10</h2>
+                        <h3>Like</h3>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

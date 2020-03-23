@@ -45,18 +45,12 @@ app.get("/", async (req, res) => {
         accounts
     });
 
-    collection.insertOne({
-        naam: "test"
-    })
+    // collection.insertOne({
+    //     naam: "test"
+    // })
 });
 
-app.get("/settings", (req, res) => {
-    res.render("base/settings.ejs", {
-        data,
-        profile,
-        accounts
-    });
-});
+
 
 // send data to Profiles collection
 app.post("/api/newProfile", async (req, res) => {
@@ -70,6 +64,48 @@ app.post("/api/newProfile", async (req, res) => {
         data: documents
     })
 })
+
+
+
+// question-1
+app.get("/quest-1", (req, res) => {
+    
+    res.render("base/quest-1.ejs", {
+        data,
+        accounts
+    });
+});
+
+// question-2
+app.get("/quest-2", (req, res) => {
+    
+    res.render("base/quest-2.ejs", {
+        data,
+        accounts
+    });
+});
+
+// question-3
+app.get("/quest-3", (req, res) => {
+    
+    res.render("base/quest-3.ejs", {
+        data,
+        accounts
+    });
+});
+
+// question-result
+app.get("/question-result", (req, res) => {
+    
+    res.render("base/question-result.ejs", {
+        data,
+        accounts
+    });
+});
+
+
+
+
 
 
 

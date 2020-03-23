@@ -1,4 +1,4 @@
-console.log("working");
+console.log("working :)");
 
 
 
@@ -15,25 +15,25 @@ let submitButton = document.getElementById('submit');
 
 
 
-window.onload = function () {
+// window.onload = function () {
 
 
 
-    // document.getElementsByClassName("disLike").addEventListener("click",);
+//     // document.getElementsByClassName("disLike").addEventListener("click",);
 
 
-    function oo() {
-        alert(location.hostname);
-    }
+//     function oo() {
+//         alert(location.hostname);
+//     }
 
-    showProfileButton.addEventListener("mousedown", function () {
-        overlayBlur.style.opacity = "0.1";
-    });
+//     showProfileButton.addEventListener("mousedown", function () {
+//         overlayBlur.style.opacity = "0.1";
+//     });
 
-    showProfileButton.addEventListener("mouseup", function () {
-        overlayBlur.style.opacity = "1.2";
-    });
-}
+//     showProfileButton.addEventListener("mouseup", function () {
+//         overlayBlur.style.opacity = "1.2";
+//     });
+// }
 
 console.log("submit button", submitButton)
 const formHandler = async (e) => {

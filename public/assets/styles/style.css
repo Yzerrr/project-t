@@ -220,23 +220,57 @@ section div ul li>img {
     bottom: 49em;
 }
 
-/* button Show */
+/* div answers */
+.answers {
+    position: relative;
+    /* padding: 9px 95px; */
+    /* margin-bottom: -5em; */
+    /* bottom: 8em; */
+}
+
+.answer {
+    position: relative;
+
+    /* padding: 9px 95px; */
+    border-radius: 3px;
+    bottom: 35em;
+    background: #E65C7C;
+    color: white;
+    border: solid white;
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+}
+
+/* button Next */
 .button {
     position: relative;
 
     padding: 9px 95px;
     border-radius: 3px;
-    bottom: 35em;
+    bottom: 36em;
     background: #E65C7C;
     color: white;
-    border: none;
+    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.54);
     font-size: 20px;
     text-decoration: none;
 }
-
+.quest-button{
+    position: relative;
+    padding: 9px 95px;
+    border-radius: 3px;
+    bottom: 33em;
+    background: #E65C7C;
+    color: white;
+    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.54);
+    font-size: 20px;
+    text-decoration: none;
+}
 /* spacing  */
 .space {
     padding-bottom: 2em;
+}
+.quest-space{
+    min-height: 19em;
 }
 
 .discription {
@@ -259,7 +293,8 @@ button {
     padding-left: 7em;
 
 }
-.status{
+
+.status {
     display: none;
 }
 
@@ -336,7 +371,7 @@ button {
         top: 4em;
     }
 
-    .status div h2{
+    .status div h2 {
         color: seashell;
         font-size: 5em;
         display: flex;
@@ -345,7 +380,8 @@ button {
         position: relative;
         top: 15px;
     }
-    .status div h3{
+
+    .status div h3 {
         color: seashell;
         display: flex;
         align-items: center;
@@ -358,7 +394,7 @@ button {
         height: 10em;
         width: 10em;
         background-color: rgba(230, 91, 126, 0.63);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         border-radius: 7px;
     }
 }
@@ -368,99 +404,102 @@ button {
 /*************************/
 @media (min-width: 64em) and (max-width: 100em) {
 
-/* body{
+    /* body{
     background: blue;
 } */
-.logo{
-    top: 0em;
-    height: 6em;
-    width: 100em;
-}
-.hs {
-    grid-template-columns: 10px repeat(6, calc(50% - var(--gutter) * -11)) 10px;
-}
+    .logo {
+        top: 0em;
+        height: 6em;
+        width: 100em;
+    }
+
+    .hs {
+        grid-template-columns: 10px repeat(6, calc(50% - var(--gutter) * -11)) 10px;
+    }
 
 
 
-/* logo */
-.logo>img {
-    width: 80px;
-}
+    /* logo */
+    .logo>img {
+        width: 80px;
+    }
 
-/* menu */
-header nav ul li {
-    width: 32em;
-}
+    /* menu */
+    header nav ul li {
+        width: 32em;
+    }
 
-header nav ul {
-    max-width: 70em;
-}
+    header nav ul {
+        max-width: 70em;
+    }
 
-.hs>li,
-.profile {
-    width: 40em;
-    margin-top: 10em;
-}
-.profiles {
-    position: relative;
-    top: -5em;
-}
+    .hs>li,
+    .profile {
+        width: 40em;
+        margin-top: 10em;
+    }
 
-section div ul li>img {
-    width: 36em;
-}
+    .profiles {
+        position: relative;
+        top: -5em;
+    }
 
-.the-profile {
-    width: 36em;
-    height: 36em;
-}
+    section div ul li>img {
+        width: 36em;
+    }
 
-.profile-info {
-    bottom: 46em;
-    width: 25em;
-}
+    .the-profile {
+        width: 36em;
+        height: 36em;
+    }
+
+    .profile-info {
+        bottom: 46em;
+        width: 25em;
+    }
 
 
-.button {
-    bottom: 33em;
-}
+    .button {
+        bottom: 33em;
+    }
 
-.dislike-like {
-    bottom: 38em;
-}
+    .dislike-like {
+        bottom: 38em;
+    }
 
-.status {
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    top: 4em;
-}
+    .status {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 4em;
+    }
 
-.status div h2{
-    color: seashell;
-    font-size: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 15px;
-}
-.status div h3{
-    color: seashell;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 15px;
-}
+    .status div h2 {
+        color: seashell;
+        font-size: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+    }
 
-.counter {
-    height: 10em;
-    width: 10em;
-    background-color: rgba(230, 91, 126, 0.63);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 7px;
-}
+    .status div h3 {
+        color: seashell;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+    }
+
+    .counter {
+        height: 10em;
+        width: 10em;
+        background-color: rgba(230, 91, 126, 0.63);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 7px;
+    }
 }
 
 @media (min-width: 75em) and (max-width: 15800em) {
@@ -468,87 +507,90 @@ section div ul li>img {
         background: gray;
     } */
 
-    .logo{
+    .logo {
         top: 0em;
         height: 6em;
         width: 150em;
     }
+
     header nav ul li {
         width: 100em;
     }
+
     header nav ul {
         max-width: 102em;
     }
-    
+
     /* menu */
 
 
-.profiles{
-    position: relative;
-    top: -5em;
-}
+    .profiles {
+        position: relative;
+        top: -5em;
+    }
 
-.hs>li,
-.profile {
-    width: 40em;
-    margin-top: 10em;
-}
+    .hs>li,
+    .profile {
+        width: 40em;
+        margin-top: 10em;
+    }
 
-section div ul li>img {
-    width: 36em;
-}
+    section div ul li>img {
+        width: 36em;
+    }
 
-.the-profile {
-    width: 36em;
-    height: 36em;
-}
+    .the-profile {
+        width: 36em;
+        height: 36em;
+    }
 
-.profile-info {
-    bottom: 46em;
-    width: 25em;
-}
+    .profile-info {
+        bottom: 46em;
+        width: 25em;
+    }
 
 
-.button {
-    bottom: 33em;
-}
+    .button {
+        bottom: 33em;
+    }
 
-.dislike-like {
-    bottom: 38em;
-}
+    .dislike-like {
+        bottom: 38em;
+    }
 
-.status {
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    top: 4em;
-}
+    .status {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 4em;
+    }
 
-.status div h2{
-    color: seashell;
-    font-size: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 15px;
-}
-.status div h3{
-    color: seashell;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 15px;
-}
+    .status div h2 {
+        color: seashell;
+        font-size: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+    }
 
-.counter {
-    height: 10em;
-    width: 10em;
-    background-color: rgba(230, 91, 126, 0.63);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 7px;
-}
+    .status div h3 {
+        color: seashell;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+    }
+
+    .counter {
+        height: 10em;
+        width: 10em;
+        background-color: rgba(230, 91, 126, 0.63);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 7px;
+    }
 
 }
 
