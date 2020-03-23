@@ -198,11 +198,20 @@ section div ul li>img {
     border-radius: 7px;
 
 }
-
-.add-blur {
-    opacity: 1.0;
+/* kan beter */
+.add-blur-1 {
+    opacity: 0.5;
     transition: 150ms;
 }
+.add-blur-2 {
+    opacity: 0.3;
+    transition: 150ms;
+}
+.add-blur-3 {
+    opacity: 0;
+    transition: 150ms;
+} 
+/* kan beter */
 
 
 
