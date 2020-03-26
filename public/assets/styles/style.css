@@ -32,6 +32,10 @@ html {
 
 }
 
+.bgpink {
+    background: rgb(236, 163, 180);
+}
+
 
 
 /*************************/
@@ -89,6 +93,7 @@ header nav ul {
     padding: 0;
     display: flex;
     max-width: 388px;
+
 }
 
 header nav ul li {
@@ -638,6 +643,7 @@ form {
     top: 10em;
     position: relative;
     width: 20em;
+    height: 90em;
     margin-left: 3em;
 }
 
@@ -678,6 +684,7 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    margin-top: 5em;
 }
 
 input[type=submit]:hover {

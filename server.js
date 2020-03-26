@@ -4,6 +4,7 @@ const port = 3000
 const ejs = require('ejs')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
+const {questions} = require('./views/base/questions');
 require('dotenv').config()
 // const session = require('express-session')
 
@@ -12,7 +13,7 @@ app.listen(port, () => console.log(`listening on port ${port}`))
 
 // session secret id
 // app.use(session({
-//     secret: coffee
+//     secret: dateapp
 // }));
 
 // Database config 
@@ -26,18 +27,29 @@ let db = null;
 
 app.use(bodyParser.json())
 
-MongoClient.connect(uri, function (err, client) {
+MongoClient.connect(uri, async function (err, client) {
     if (err) {
         throw err
     }
 
     db = client.db("datingapp");
-
+    await initializeQuestions();
 })
 
-MongoClient.connect('connect', (err, connected) => {
+MongoClient.connect('connect',(err, connected) => {
     console.log("Conection setted")
+    
 })
+
+async function initializeQuestions() {
+   await db.collection('questions').removeMany({});
+ 
+
+        await db.collection('questions').insertMany(questions)
+
+}
+
+
 
 
 // Start a Session | index
@@ -55,12 +67,13 @@ app.get("/", async (req, res) => {
 
 // sign up profile | newProfile
 app.get("/newProfile", async (req, res) => {
-
+    const questions = await db.collection('questions').find({}).toArray()
 
     res.render("base/newProfile.ejs", {
         data,
         profile,
-        accounts
+        accounts,
+        questions
     });
 });
 // send data to Profiles collection

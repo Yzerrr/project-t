@@ -10,40 +10,28 @@
 
 
     <label for="message">Beschrijving</label>
-    
+
     <textarea id="message" placeholder="Vertel iets over jezelf" name="message"></textarea>
+    <h3 class="space">Quistions</h3>
 
-
-  
-        <p>Select some quistions</p>
+    <% for(var i=0; i < questions.length; i++) { %>
         <br>
+    <h4> <%= questions[i].question %></h4>
 
-        <!-- question-1 -->
-        <input type="radio" id="question-1" name="dinner-guest" value="">
-        <label for="">Wich of the persons below is most likly to be a dinner guest at your home?</label><br>
-        
-        <input type="radio" id="answer-1" name="dinner-guest" value="option-1">
-        <label for="option-1"> Option-1</label><br>
+    <% for(var optionIndex=0; optionIndex < questions[i].options.length; optionIndex++) { %> <br>
+    <input type="radio" id="answer-1" name="dinner-guest" value="option-1">
+    <label for="option-1"> <%=  questions[i].options[optionIndex]%></label><br>
+    <% } %>
 
-        <input type="radio" id="answer-2" name="dinner-guest" value="option-2">
-        <label for="option-1"> Option-2</label><br>
 
-        <input type="radio" id="answer-3" name="dinner-guest" value="option-3">
-        <label for="option-1"> Option-3</label><br>
-        <!-- question-1 -->
-        
-        <!-- question-2 -->
-       
 
-        <!-- question-2 -->
-        <!-- question-3 -->
-        
-        <!-- question-3 -->
+    <% } %>
 
-    
-     
 
-    
 
-    <input id="submit" type="submit"  value="Aanmelden">
+
+
+
+
+    <input id="submit" type="submit" value="Aanmelden">
 </form>
