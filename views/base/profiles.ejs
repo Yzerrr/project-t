@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('partials/head.ejs') %>
+<title>profiles</title>
+
+<body>
+    <!-- header -->
+    <%- include('partials/header.ejs') %>
+    <main>
+
+        <!-- slindingProfiles -->
+        <section class="profiles">
+
+            <div class="full hide-scroll">
+                <ul class="hs">
+
+                    <% for(var i=0; i < profiles.length; i++) { %>
+
+                    <li class="profile">
+                        <div class="overlay-blur add-blur">
+                            <img class="the-profile" src="/assets/images/overlay.png" alt="overlay filter">
+                        </div>
+
+                        <img src="/assets/images/stock-photo-1.jpg" alt="photo">
+
+                        <article class="profile-info">
+                            <h1 class="space"><%= profiles[i].profileName %></h1>
+                            <h2 class="space"><%= profiles[i].profileAge %></h2>
+                            <h2 class="space"><%=profiles[i].profileCity %></h2>
+                            <p class="discription"> <%= profiles [i].profileDiscription%> </p>
+                        </article>
+
+                        <!-- <input type="button" value=" Questions" class="button"> -->
+                        <a href="quest-1" class="button">
+                            Questions
+                        </a>
+
+                        <div class="dislike-like">
+
+
+                            <!-- <button  class="dislike">
+                                <img src="/assets/icons/delete.svg" alt="dislike">
+                              
+                            </button> -->
+
+                            <!-- <a href="#" class="dislike">
+                                <img src="/assets/icons/delete.svg" alt="dislike">
+                            </a> -->
+                            <!-- <button class="like">
+                                <img src="/assets/icons/heart.svg" alt="like">
+                            </button> -->
+
+                            <!-- <a href="#">
+                                <img src="/assets/icons/heart.svg" alt="like">
+                            </a> -->
+
+                        </div>
+
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+
+            <div class="status">
+                <div class="counter dLike">
+                    <h2>10</h2>
+                    <h3>Dislike</h3>
+                </div>
+                <div class="counter like">
+                    <h2>10</h2>
+                    <h3>Like</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

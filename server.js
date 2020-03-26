@@ -5,13 +5,18 @@ const ejs = require('ejs')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 require('dotenv').config()
+// const session = require('express-session')
 
 // shows the port from server
 app.listen(port, () => console.log(`listening on port ${port}`))
 
+// session secret id
+// app.use(session({
+//     secret: coffee
+// }));
 
+// Database config 
 
-//Database config
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://" + process.env.DB_NAME + ":" + process.env.DB_KEY + "@blocktech-aia3c.azure.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
@@ -35,23 +40,29 @@ MongoClient.connect('connect', (err, connected) => {
 })
 
 
-
-// find persons | index
+// Start a Session | index
 app.get("/", async (req, res) => {
     const profiles = await db.collection('profiles').find().toArray();
     res.render("base/index.ejs", {
-        data,
         profiles,
         accounts
     });
 
-    // collection.insertOne({
-    //     naam: "test"
-    // })
+
 });
 
 
 
+// sign up profile | newProfile
+app.get("/newProfile", async (req, res) => {
+
+
+    res.render("base/newProfile.ejs", {
+        data,
+        profile,
+        accounts
+    });
+});
 // send data to Profiles collection
 app.post("/api/newProfile", async (req, res) => {
 
@@ -65,69 +76,85 @@ app.post("/api/newProfile", async (req, res) => {
     })
 })
 
+// all profiles | profiles
+app.get("/profiles", async (req, res) => {
+    const profiles = await db.collection('profiles').find().toArray();
+    res.render("base/profiles.ejs", {
+
+        profiles,
+        accounts
+    });
+
+    // collection.insertOne({
+    //     naam: "test"
+    // })
+});
 
 
-// question-1
+
+
+
+// question page | question-1
 app.get("/quest-1", (req, res) => {
-    
+
     res.render("base/quest-1.ejs", {
         data,
         accounts
     });
 });
 
-// question-2
+// question page | question-2
 app.get("/quest-2", (req, res) => {
-    
+
     res.render("base/quest-2.ejs", {
         data,
         accounts
     });
 });
 
-// question-3
+// question page | question-3
 app.get("/quest-3", (req, res) => {
-    
+
     res.render("base/quest-3.ejs", {
         data,
         accounts
     });
 });
 
-// question-result
+// question page | question-result
 app.get("/question-result", (req, res) => {
-    
+
     res.render("base/question-result.ejs", {
         data,
         accounts
     });
 });
 
+// delete session page | remove session
+app.get("/deleteSession", (req, res) => {
 
-
-
-
-
-
-
-
-
-// sign up profile
-app.get("/newProfile", async (req, res) => {
-
-
-    res.render("base/newProfile.ejs", {
+    res.render("base/deleteSession.ejs", {
         data,
-        profile,
-        accounts
+        profile
     });
 });
 
 
 
-function form(req, res) {
-    res.render('newProfile.ejs')
-}
+
+
+
+
+
+
+
+
+
+
+
+// function form(req, res) {
+//     res.render('newProfile.ejs')
+// }
 
 let data = {
     title: "dateApp",
@@ -168,5 +195,3 @@ app.set("view engine", "ejs")
 app.use(function (req, res) {
     res.send("404: Page not found", 404);
 });
-
-

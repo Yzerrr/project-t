@@ -60,6 +60,21 @@ html {
     top: 20px;
 }
 
+
+/* sessionButtonStart */
+.sessionButton a {
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 7px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 35em auto;
+    display: block;
+}
+
 /* menu */
 
 
@@ -198,19 +213,23 @@ section div ul li>img {
     border-radius: 7px;
 
 }
+
 /* kan beter */
 .add-blur-1 {
     opacity: 0.5;
     transition: 150ms;
 }
+
 .add-blur-2 {
     opacity: 0.3;
     transition: 150ms;
 }
+
 .add-blur-3 {
     opacity: 0;
     transition: 150ms;
-} 
+}
+
 /* kan beter */
 
 
@@ -259,26 +278,29 @@ section div ul li>img {
     bottom: 36em;
     background: #E65C7C;
     color: white;
-    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.54);
+    box-shadow: 11px 10px 5px -6px rgba(0, 0, 0, 0.54);
     font-size: 20px;
     text-decoration: none;
 }
-.quest-button{
+
+.quest-button {
     position: relative;
     padding: 9px 95px;
     border-radius: 3px;
     bottom: 33em;
     background: #E65C7C;
     color: white;
-    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.54);
+    box-shadow: 11px 10px 5px -6px rgba(0, 0, 0, 0.54);
     font-size: 20px;
     text-decoration: none;
 }
+
 /* spacing  */
 .space {
     padding-bottom: 2em;
 }
-.quest-space{
+
+.quest-space {
     min-height: 19em;
 }
 
